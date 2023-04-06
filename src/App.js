@@ -1,25 +1,56 @@
-import logo from './logo.svg';
+import { useContext } from "react";
 import './App.css';
+import PanelsContext, { PanelsContextProvider } from "./js/panelcontext";
+import Panel from './js/panel';
+import Detail from './js/detail';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const contextPanels = useContext(PanelsContext);
+
+    return (
+
+        <div className="App">
+
+            <PanelsContextProvider>
+
+                <div className="_panels">
+                    {
+                        Array(3).fill(null).map((ul, i) => {
+                            return (
+                                <ul>
+                                    {
+                                        Array(3).fill(null).map((li, j) => {
+                                            let index = i * 3 + j;
+                                            return (
+                                                <li className="_square">
+                                                    <div>
+
+                                                        <Panel index={index} onTest={contextPanels.testHandler}></Panel>
+
+                                                    </div>
+                                                </li>
+                                            );
+                                        })
+                                    }
+                                </ul>
+                            );
+                        })
+                    }
+                </div>
+
+                <div className="_panels">
+                    <div className="_square">
+
+                        <Detail detail={contextPanels.detail}></Detail>
+
+                    </div>
+                </div>
+
+            </PanelsContextProvider>
+        </div>
+
+    );
 }
 
 export default App;
