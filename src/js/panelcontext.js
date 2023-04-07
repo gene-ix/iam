@@ -9,7 +9,7 @@ export const PanelsContextProvider = (props) => {
     const [detail, setDetail] = useState("");
 
     useEffect(() => {
-        axios.get('http://atelier.topaz.ne.jp/iam_data/20230401.php')
+        axios.get('https://gene-ix.github.io/iam_data/20230407.json')
             .then(res => {
                 setPanels(res.data)
             })
