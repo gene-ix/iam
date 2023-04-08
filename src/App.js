@@ -14,7 +14,7 @@ function App() {
 
             <PanelsContextProvider>
 
-                <div className="_panels">
+                <div className="_panels" id="_menu">
                     {
                         Array(3).fill(null).map((ul, i) => {
                             return (
@@ -39,7 +39,7 @@ function App() {
                     }
                 </div>
 
-                <div className="_panels">
+                <div className="_panels" id="_body">
                     <div className="_square">
 
                         <Detail detail={contextPanels.detail}></Detail>
