@@ -68,7 +68,7 @@ $fw-color: darken($color: $bg-color, $amount: 60%);
         align-items: center;
         user-select: none;
         flex-direction: row;
-        // padding: 10px;
+        padding: 10px;
 
         @include Responsive(height, 100vh, 100vh, initial);
         @include Responsive(min-height, initial, initial, 100vh);
