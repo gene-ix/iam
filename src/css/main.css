@@ -26,14 +26,14 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding: 10px;
+  padding: 8px;
   height: 100vh;
   min-height: initial;
   max-width: 500px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 @media screen and (min-width: 576px) {
@@ -90,35 +90,88 @@
   }
 }
 
+@media screen and (min-width: 576px) {
+  #root .App {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #root .App {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #root .App {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 ._panels {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media screen and (min-width: 576px) {
+  ._panels {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  ._panels {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  ._panels {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 ._panels#_menu {
   overflow: auto;
-  -webkit-box-orient: vertical;
+  width: 100%;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 30%;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 @media screen and (min-width: 576px) {
   ._panels#_menu {
-    width: 30%;
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 768px) {
   ._panels#_menu {
-    width: 30%;
+    width: 100%;
   }
 }
 
@@ -128,37 +181,78 @@
   }
 }
 
-._panels#_menu ul {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 @media screen and (min-width: 576px) {
-  ._panels#_menu ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  ._panels#_menu ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  ._panels#_menu ul {
+  ._panels#_menu {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  ._panels#_menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  ._panels#_menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+._panels#_menu ul {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+._panels#_menu ul li {
+  width: 96px;
+  height: 96px;
+}
+
+@media screen and (min-width: 576px) {
+  ._panels#_menu ul li {
+    width: 96px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  ._panels#_menu ul li {
+    width: 96px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  ._panels#_menu ul li {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  ._panels#_menu ul li {
+    height: 96px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  ._panels#_menu ul li {
+    height: 96px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  ._panels#_menu ul li {
+    height: 100%;
   }
 }
 
@@ -226,6 +320,9 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 ._panels ul {
@@ -247,8 +344,8 @@
 }
 
 ._panels ul li > div input[type="radio"]:checked + label {
-  -webkit-box-shadow: 7px 7px 7px #c1c9d0 inset, -7px -7px 7px #e4e7ea inset, -1px -1px 2px #cfd5db, 1px 1px 2px #e4e7ea;
-          box-shadow: 7px 7px 7px #c1c9d0 inset, -7px -7px 7px #e4e7ea inset, -1px -1px 2px #cfd5db, 1px 1px 2px #e4e7ea;
+  -webkit-box-shadow: 8px 8px 8px #c1c9d0 inset, -8px -8px 8px #e4e7ea inset, -1px -1px 2px #cfd5db, 1px 1px 2px #e4e7ea;
+          box-shadow: 8px 8px 8px #c1c9d0 inset, -8px -8px 8px #e4e7ea inset, -1px -1px 2px #cfd5db, 1px 1px 2px #e4e7ea;
   background-color: #dbdfe4;
 }
 
@@ -257,10 +354,10 @@
 }
 
 ._panels ul li > div label {
-  -webkit-box-shadow: 5px 5px 7px #c1c9d0, -5px -5px 7px #eaecef, 1px 1px 2px #edeff1 inset, -1px -1px 2px #c1c9d0 inset;
-          box-shadow: 5px 5px 7px #c1c9d0, -5px -5px 7px #eaecef, 1px 1px 2px #edeff1 inset, -1px -1px 2px #c1c9d0 inset;
+  -webkit-box-shadow: 4px 4px 8px #c1c9d0, -4px -4px 8px #eaecef, 1px 1px 2px #edeff1 inset, -1px -1px 2px #c1c9d0 inset;
+          box-shadow: 4px 4px 8px #c1c9d0, -4px -4px 8px #eaecef, 1px 1px 2px #edeff1 inset, -1px -1px 2px #c1c9d0 inset;
   background-color: #e1e5e8;
-  border-radius: 10px;
+  border-radius: 8px;
   width: 100%;
   height: 100%;
   color: inherit;
@@ -277,26 +374,26 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 5%;
-  font-size: 1em;
+  gap: 8px;
+  font-size: 16px;
   cursor: pointer;
 }
 
 @media screen and (min-width: 576px) {
   ._panels ul li > div label {
-    border-radius: 10px;
+    border-radius: 8px;
   }
 }
 
 @media screen and (min-width: 768px) {
   ._panels ul li > div label {
-    border-radius: 10px;
+    border-radius: 8px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   ._panels ul li > div label {
-    border-radius: 20px;
+    border-radius: 16px;
   }
 }
 
@@ -305,7 +402,7 @@
 }
 
 ._panels ul li > div label p {
-  padding: 10%;
+  padding: 8px;
   margin: 0;
 }
 
@@ -314,31 +411,31 @@
 }
 
 ._panels ._detail > div {
-  -webkit-box-shadow: 7px 7px 7px #c1c9d0 inset, -7px -7px 7px #e4e7ea inset, -1px -1px 2px #cfd5db, 1px 1px 2px #e4e7ea;
-          box-shadow: 7px 7px 7px #c1c9d0 inset, -7px -7px 7px #e4e7ea inset, -1px -1px 2px #cfd5db, 1px 1px 2px #e4e7ea;
+  -webkit-box-shadow: 8px 8px 8px #c1c9d0 inset, -8px -8px 8px #e4e7ea inset, -1px -1px 2px #cfd5db, 1px 1px 2px #e4e7ea;
+          box-shadow: 8px 8px 8px #c1c9d0 inset, -8px -8px 8px #e4e7ea inset, -1px -1px 2px #cfd5db, 1px 1px 2px #e4e7ea;
   background-color: #dbdfe4;
-  border-radius: 10px;
+  border-radius: 8px;
   width: 100%;
   height: 100%;
-  padding: 50px;
+  padding: 48px;
   overflow: auto;
 }
 
 @media screen and (min-width: 576px) {
   ._panels ._detail > div {
-    border-radius: 10px;
+    border-radius: 8px;
   }
 }
 
 @media screen and (min-width: 768px) {
   ._panels ._detail > div {
-    border-radius: 10px;
+    border-radius: 8px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   ._panels ._detail > div {
-    border-radius: 20px;
+    border-radius: 16px;
   }
 }
 
@@ -364,7 +461,7 @@
           align-items: center;
   gap: 10px;
   color: #c1c9d0;
-  font-size: 2.7em;
+  font-size: 2.4em;
 }
 
 ._square {
@@ -385,24 +482,24 @@
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 7px;
+  padding: 8px;
 }
 
 @media screen and (min-width: 576px) {
   ._square > div {
-    padding: 7px;
+    padding: 8px;
   }
 }
 
 @media screen and (min-width: 768px) {
   ._square > div {
-    padding: 7px;
+    padding: 8px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   ._square > div {
-    padding: 15px;
+    padding: 16px;
   }
 }
 
