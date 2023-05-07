@@ -15,8 +15,8 @@ $fw-color: darken($color: $bg-color, $amount: 60%);
         box-shadow:
             8px 8px 8px $color-shadow inset, // 左上影
             -8px -8px 8px $color-reflection inset, // 右下反射
-            -1px -1px 2px darken($color: $bg-color, $amount: 5%), // 左上エッジ影
-            1px 1px 2px $color-reflection, // 右下エッジ反射
+            -2px -2px 2px darken($color: $bg-color, $amount: 5%), // 左上エッジ影
+            2px 2px 2px $color-reflection, // 右下エッジ反射
         ;
         background-color: darken($color: $bg-color, $amount: 1%);
     }
@@ -24,10 +24,10 @@ $fw-color: darken($color: $bg-color, $amount: 60%);
     // 凸
     @else {
         box-shadow:
-            4px 4px 8px $color-shadow, // 右下影
-            -4px -4px 8px lighten($color: $bg-color, $amount: 4%), // 左上反射
-            1px 1px 2px lighten($color: $bg-color, $amount: 5%) inset, // 左上エッジ反射
-            -1px -1px 2px $color-shadow inset, // 右下エッジ影
+            8px 8px 8px $color-shadow, // 右下影
+            -8px -8px 8px lighten($color: $bg-color, $amount: 3%), // 左上反射
+            2px 2px 2px lighten($color: $bg-color, $amount: 5%) inset, // 左上エッジ反射
+            -2px -2px 2px $color-shadow inset, // 右下エッジ影
         ;
         background-color: lighten($color: $bg-color, $amount: 1%);
     }
