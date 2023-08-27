@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import PanelsContext from "./panelcontext";
+import CatchCopy from "./catchcopy";
 
 function Detail(props) {
 
@@ -13,9 +14,7 @@ function Detail(props) {
                     (detail.length < 1)
                         ?
                         <h2>
-                            <span>Graphical Logic</span>
-                            <span>&times;</span>
-                            <span>Logical Graphic</span>
+                            <CatchCopy></CatchCopy>
                         </h2>
                         :
                         [...detail].map((value, index) => {

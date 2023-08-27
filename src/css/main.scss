@@ -88,7 +88,7 @@ $fw-color: darken($color: $bg-color, $amount: 60%);
         ul {
             flex-direction: row;
 
-            li{
+            li {
                 @include Responsive(width, 96px, 96px, 100%);
                 @include Responsive(height, 96px, 96px, 100%);
             }
@@ -148,16 +148,18 @@ $fw-color: darken($color: $bg-color, $amount: 60%);
                     font-size: 16px;
                     cursor: pointer;
 
-                    h1 {
-                        font-size: 1.2em;
-                    }
+                    // h1 {
+                    //     font-size: 1.2em;
+                    // }
 
                     p {
                         padding: 8px;
                         margin: 0;
                     }
 
-                    span {}
+                    span {
+                        @include Responsive(display, none, none, initial);
+                    }
                 }
             }
         }
@@ -186,9 +188,6 @@ $fw-color: darken($color: $bg-color, $amount: 60%);
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 10px;
-            color: darken($color: $bg-color, $amount: 10%);
-            font-size: 2.4em;
         }
     }
 }
@@ -215,9 +214,25 @@ $fw-color: darken($color: $bg-color, $amount: 60%);
     }
 }
 
-svg {
-    width: 30%;
-    height: 30%;
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.2rem;
+    gap: 8px;
 
-    fill: $fw-color;
+    svg {
+        @include Responsive(width, 60%, 60%, 30%);
+        @include Responsive(height, 60%, 60%, 30%);
+
+        fill: $fw-color;
+    }
+}
+
+h2 {
+    svg {
+        @include Responsive(width, 100%, 70%, 50%);
+        fill: darken($color: $bg-color, $amount: 10%);
+    }
 }

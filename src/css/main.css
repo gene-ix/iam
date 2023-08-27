@@ -4,415 +4,297 @@
   min-height: 100vh;
   color: #3f4953;
   background-color: #dee2e6;
-  font-family: 'Comfortaa', cursive, sans-serif;
+  font-family: "Comfortaa", cursive, sans-serif;
 }
-
 #root * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   outline: none;
   margin: 0;
 }
-
 #root .App {
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   padding: 8px;
   height: 100vh;
   min-height: initial;
   max-width: 500px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
-
 @media screen and (min-width: 576px) {
   #root .App {
     height: 100vh;
   }
 }
-
 @media screen and (min-width: 768px) {
   #root .App {
     height: 100vh;
   }
 }
-
 @media screen and (min-width: 1200px) {
   #root .App {
     height: initial;
   }
 }
-
 @media screen and (min-width: 576px) {
   #root .App {
     min-height: initial;
   }
 }
-
 @media screen and (min-width: 768px) {
   #root .App {
     min-height: initial;
   }
 }
-
 @media screen and (min-width: 1200px) {
   #root .App {
     min-height: 100vh;
   }
 }
-
 @media screen and (min-width: 576px) {
   #root .App {
     max-width: 500px;
   }
 }
-
 @media screen and (min-width: 768px) {
   #root .App {
     max-width: 500px;
   }
 }
-
 @media screen and (min-width: 1200px) {
   #root .App {
     max-width: 1500px;
   }
 }
-
 @media screen and (min-width: 576px) {
   #root .App {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
 }
-
 @media screen and (min-width: 768px) {
   #root .App {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
 }
-
 @media screen and (min-width: 1200px) {
   #root .App {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 }
 
 ._panels {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 @media screen and (min-width: 576px) {
   ._panels {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 }
-
 @media screen and (min-width: 768px) {
   ._panels {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 }
-
 @media screen and (min-width: 1200px) {
   ._panels {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
-
 ._panels#_menu {
   overflow: auto;
   width: 100%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 @media screen and (min-width: 576px) {
   ._panels#_menu {
     width: 100%;
   }
 }
-
 @media screen and (min-width: 768px) {
   ._panels#_menu {
     width: 100%;
   }
 }
-
 @media screen and (min-width: 1200px) {
   ._panels#_menu {
     width: 50%;
   }
 }
-
 @media screen and (min-width: 576px) {
   ._panels#_menu {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 }
-
 @media screen and (min-width: 768px) {
   ._panels#_menu {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 }
-
 @media screen and (min-width: 1200px) {
   ._panels#_menu {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
-
 ._panels#_menu ul {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 ._panels#_menu ul li {
   width: 96px;
   height: 96px;
 }
-
 @media screen and (min-width: 576px) {
   ._panels#_menu ul li {
     width: 96px;
   }
 }
-
 @media screen and (min-width: 768px) {
   ._panels#_menu ul li {
     width: 96px;
   }
 }
-
 @media screen and (min-width: 1200px) {
   ._panels#_menu ul li {
     width: 100%;
   }
 }
-
 @media screen and (min-width: 576px) {
   ._panels#_menu ul li {
     height: 96px;
   }
 }
-
 @media screen and (min-width: 768px) {
   ._panels#_menu ul li {
     height: 96px;
   }
 }
-
 @media screen and (min-width: 1200px) {
   ._panels#_menu ul li {
     height: 100%;
   }
 }
-
 ._panels#_menu ul:nth-of-type(2) {
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
+  order: -1;
 }
-
 @media screen and (min-width: 576px) {
   ._panels#_menu ul:nth-of-type(2) {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
+    order: -1;
   }
 }
-
 @media screen and (min-width: 768px) {
   ._panels#_menu ul:nth-of-type(2) {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
+    order: -1;
   }
 }
-
 @media screen and (min-width: 1200px) {
   ._panels#_menu ul:nth-of-type(2) {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
+    order: 0;
   }
 }
-
 ._panels#_menu ul:nth-of-type(2) li:nth-of-type(1) {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  order: 2;
 }
-
 @media screen and (min-width: 576px) {
   ._panels#_menu ul:nth-of-type(2) li:nth-of-type(1) {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
   }
 }
-
 @media screen and (min-width: 768px) {
   ._panels#_menu ul:nth-of-type(2) li:nth-of-type(1) {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
   }
 }
-
 @media screen and (min-width: 1200px) {
   ._panels#_menu ul:nth-of-type(2) li:nth-of-type(1) {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
+    order: 0;
   }
 }
-
 ._panels#_body {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   width: 100%;
   height: 100%;
   display: block;
 }
-
 ._panels ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 ._panels ul li {
   width: 100%;
   height: 100%;
 }
-
-._panels ul li > div input[type="radio"] {
+._panels ul li > div input[type=radio] {
   display: none;
 }
-
-._panels ul li > div input[type="radio"]:checked + label {
-  -webkit-box-shadow: 8px 8px 8px #c1c9d0 inset, -8px -8px 8px #e4e7ea inset, -2px -2px 2px #cfd5db, 2px 2px 2px #e4e7ea;
-          box-shadow: 8px 8px 8px #c1c9d0 inset, -8px -8px 8px #e4e7ea inset, -2px -2px 2px #cfd5db, 2px 2px 2px #e4e7ea;
+._panels ul li > div input[type=radio]:checked + label {
+  box-shadow: 8px 8px 8px #c1c9d0 inset, -8px -8px 8px #e4e7ea inset, -2px -2px 2px #cfd5db, 2px 2px 2px #e4e7ea;
   background-color: #dbdfe4;
 }
-
-._panels ul li > div input[type="radio"]:disabled + label {
+._panels ul li > div input[type=radio]:disabled + label {
   cursor: default;
 }
-
 ._panels ul li > div label {
-  -webkit-box-shadow: 8px 8px 8px #c1c9d0, -8px -8px 8px #e7eaed, 2px 2px 2px #edeff1 inset, -2px -2px 2px #c1c9d0 inset;
-          box-shadow: 8px 8px 8px #c1c9d0, -8px -8px 8px #e7eaed, 2px 2px 2px #edeff1 inset, -2px -2px 2px #c1c9d0 inset;
+  box-shadow: 8px 8px 8px #c1c9d0, -8px -8px 8px #e7eaed, 2px 2px 2px #edeff1 inset, -2px -2px 2px #c1c9d0 inset;
   background-color: #e1e5e8;
   border-radius: 8px;
   width: 100%;
   height: 100%;
   color: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   gap: 8px;
   font-size: 16px;
   cursor: pointer;
 }
-
 @media screen and (min-width: 576px) {
   ._panels ul li > div label {
     border-radius: 8px;
   }
 }
-
 @media screen and (min-width: 768px) {
   ._panels ul li > div label {
     border-radius: 8px;
   }
 }
-
 @media screen and (min-width: 1200px) {
   ._panels ul li > div label {
     border-radius: 16px;
   }
 }
-
-._panels ul li > div label h1 {
-  font-size: 1.2em;
-}
-
 ._panels ul li > div label p {
   padding: 8px;
   margin: 0;
 }
-
+._panels ul li > div label span {
+  display: none;
+}
+@media screen and (min-width: 576px) {
+  ._panels ul li > div label span {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  ._panels ul li > div label span {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  ._panels ul li > div label span {
+    display: initial;
+  }
+}
 ._panels ._detail {
   font-size: 100%;
 }
-
 ._panels ._detail > div {
-  -webkit-box-shadow: 8px 8px 8px #c1c9d0 inset, -8px -8px 8px #e4e7ea inset, -2px -2px 2px #cfd5db, 2px 2px 2px #e4e7ea;
-          box-shadow: 8px 8px 8px #c1c9d0 inset, -8px -8px 8px #e4e7ea inset, -2px -2px 2px #cfd5db, 2px 2px 2px #e4e7ea;
+  box-shadow: 8px 8px 8px #c1c9d0 inset, -8px -8px 8px #e4e7ea inset, -2px -2px 2px #cfd5db, 2px 2px 2px #e4e7ea;
   background-color: #dbdfe4;
   border-radius: 8px;
   width: 100%;
@@ -420,48 +302,31 @@
   padding: 48px;
   overflow: auto;
 }
-
 @media screen and (min-width: 576px) {
   ._panels ._detail > div {
     border-radius: 8px;
   }
 }
-
 @media screen and (min-width: 768px) {
   ._panels ._detail > div {
     border-radius: 8px;
   }
 }
-
 @media screen and (min-width: 1200px) {
   ._panels ._detail > div {
     border-radius: 16px;
   }
 }
-
 ._panels ._detail > div::-webkit-scrollbar {
   display: none;
 }
-
 ._panels ._detail h2 {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
-  color: #c1c9d0;
-  font-size: 2.4em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 ._square {
@@ -469,13 +334,11 @@
   position: relative;
   height: 100%;
 }
-
 ._square::before {
-  content: '';
+  content: "";
   display: block;
   padding-top: 100%;
 }
-
 ._square > div {
   position: absolute;
   top: 0;
@@ -484,28 +347,82 @@
   height: 100%;
   padding: 8px;
 }
-
 @media screen and (min-width: 576px) {
   ._square > div {
     padding: 8px;
   }
 }
-
 @media screen and (min-width: 768px) {
   ._square > div {
     padding: 8px;
   }
 }
-
 @media screen and (min-width: 1200px) {
   ._square > div {
     padding: 16px;
   }
 }
 
-svg {
-  width: 30%;
-  height: 30%;
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.2rem;
+  gap: 8px;
+}
+h1 svg {
+  width: 60%;
+  height: 60%;
   fill: #3f4953;
 }
-/*# sourceMappingURL=main.css.map */
+@media screen and (min-width: 576px) {
+  h1 svg {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1 svg {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  h1 svg {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 576px) {
+  h1 svg {
+    height: 60%;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1 svg {
+    height: 60%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  h1 svg {
+    height: 30%;
+  }
+}
+
+h2 svg {
+  width: 100%;
+  fill: #c1c9d0;
+}
+@media screen and (min-width: 576px) {
+  h2 svg {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  h2 svg {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  h2 svg {
+    width: 50%;
+  }
+}/*# sourceMappingURL=main.css.map */

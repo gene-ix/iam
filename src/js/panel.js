@@ -24,7 +24,7 @@ function Panel(props) {
 
             <label htmlFor={index}>
 
-                {panel[index].logo ? <Logo></Logo> : <></>}
+                {panel[index].logo ? <h1><Logo></Logo></h1> : <></>}
                 {panel[index].title1 ? <span>{panel[index].title1}</span> : <></>}
                 {panel[index].title2 ? <span>{panel[index].title2}</span> : <></>}
                 {panel[index].body ? <p>{panel[index].body}</p> : <></>}
