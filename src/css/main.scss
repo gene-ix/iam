@@ -189,6 +189,20 @@ $fw-color: darken($color: $bg-color, $amount: 60%);
             justify-content: center;
             align-items: center;
         }
+
+        ._sptitle {
+            text-align: center;
+            padding-bottom: 16px;
+            @include Responsive(display, initial, initial, none);
+
+            ._sptitle1 {
+                font-size: 2em;
+            }
+
+            ._sptitle2 {
+                font-size: 1.2em;
+            }
+        }
     }
 }
 

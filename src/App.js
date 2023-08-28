@@ -42,7 +42,7 @@ function App() {
                 <div className="_panels" id="_body">
                     <div className="_square">
 
-                        <Detail detail={contextPanels.detail}></Detail>
+                        <Detail detail={contextPanels}></Detail>
 
                     </div>
                 </div>
