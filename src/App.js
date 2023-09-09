@@ -15,32 +15,34 @@ function App() {
             <PanelsContextProvider>
 
                 <div className="_panels" id="_menu">
-                    {
-                        Array(3).fill(null).map((ul, i) => {
-                            return (
-                                <ul>
-                                    {
-                                        Array(3).fill(null).map((li, j) => {
-                                            let index = i * 3 + j;
-                                            return (
-                                                <li className="_square">
-                                                    <div>
+                    <div>
+                        {
+                            Array(3).fill(null).map((ul, i) => {
+                                return (
+                                    <ul>
+                                        {
+                                            Array(3).fill(null).map((li, j) => {
+                                                let index = i * 3 + j;
+                                                return (
+                                                    <li>
+                                                        <div>
 
-                                                        <Panel index={index} onTest={contextPanels.testHandler}></Panel>
+                                                            <Panel index={index} onTest={contextPanels.testHandler}></Panel>
 
-                                                    </div>
-                                                </li>
-                                            );
-                                        })
-                                    }
-                                </ul>
-                            );
-                        })
-                    }
+                                                        </div>
+                                                    </li>
+                                                );
+                                            })
+                                        }
+                                    </ul>
+                                );
+                            })
+                        }
+                    </div>
                 </div>
 
                 <div className="_panels" id="_body">
-                    <div className="_square">
+                    <div>
 
                         <Detail detail={contextPanels}></Detail>
 

@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
 
 $bg-color: #dee2e6;
 $fw-color: darken($color: $bg-color, $amount: 60%);
@@ -33,19 +31,37 @@ $fw-color: darken($color: $bg-color, $amount: 60%);
     }
 }
 
-@mixin Responsive($prop, $sm, $md, $lg) {
-    #{$prop}: $sm;
+@mixin Responsive($prop, $sm-landscape, $sm-portrait, $md-landscape, $md-portrait, $lg-landscape, $lg-portrait) {
+    #{$prop}: $sm-portrait;
 
-    @media screen and (min-width: 576px) {
-        #{$prop}: $sm;
+    @media (min-width: 576px) {
+        @media (orientation: landscape) {
+            #{$prop}: $sm-landscape;
+        }
+
+        @media (orientation: portrait) {
+            #{$prop}: $sm-portrait;
+        }
     }
 
-    @media screen and (min-width: 768px) {
-        #{$prop}: $md;
+    @media (min-width: 768px) {
+        @media (orientation: landscape) {
+            #{$prop}: $md-landscape;
+        }
+
+        @media (orientation: portrait) {
+            #{$prop}: $md-portrait;
+        }
     }
 
-    @media screen and (min-width: 1200px) {
-        #{$prop}: $lg;
+    @media (min-width: 1200px) {
+        @media (orientation: landscape) {
+            #{$prop}: $lg-landscape;
+        }
+
+        @media (orientation: portrait) {
+            #{$prop}: $lg-portrait;
+        }
     }
 }
 
@@ -67,168 +83,133 @@ $fw-color: darken($color: $bg-color, $amount: 60%);
         display: flex;
         align-items: center;
         user-select: none;
-        // padding: 8px;
-        @include Responsive(padding, 0px, 0px, 8px);
+        min-height: 100vh;
 
-        @include Responsive(height, 100vh, 100vh, initial);
-        @include Responsive(min-height, initial, initial, 100vh);
-        @include Responsive(max-width, 500px, 500px, 1500px);
-        @include Responsive(flex-direction, column-reverse, column-reverse, row);
+        // @include Responsive(padding, 0px, 0px, 0px, 0px, 8px, 8px);
+        @include Responsive(height, 100vh, 100vh, 100vh, 100vh, initial, initial);
+        // @include Responsive(min-height, initial, initial, initial, initial, 100vh, 100vh);
+        @include Responsive(max-width, 100%, 100%, 100%, 500px, 1500px, 1500px);
+        @include Responsive(flex-direction, row-reverse, column-reverse, row-reverse, column-reverse, row, row);
     }
 }
 
 ._panels {
-    display: flex;
-    @include Responsive(flex-direction, row, row, column);
-    @include Responsive(padding, 8px, 8px, 0px);
+    position: relative;
+    width: 100%;
 
     &#_menu {
         overflow: auto;
-        padding-top: 0px;
-        @include Responsive(width, 100%, 100%, 50%);
-        @include Responsive(flex-direction, row, row, column);
-
-        ul {
-            flex-direction: row;
-
-            li {
-                @include Responsive(width, 96px, 96px, 100%);
-                @include Responsive(height, 96px, 96px, 100%);
-            }
-
-            &:nth-of-type(2) {
-                @include Responsive(order, -1, -1, 0);
-
-                li:nth-of-type(1) {
-                    @include Responsive(order, 2, 2, 0);
-                }
-            }
-        }
+        height: 100%;
+        @include Responsive(width, auto, 100%, auto, 100%, 50%, 50%);
+        @include Responsive(height, 100%, auto, 100%, auto, 100%, 100%);
     }
 
     &#_body {
         flex: 1;
+        height: 100%;
+
+        &>div {
+            width: 100%;
+            height: 100%;
+            @include Responsive(padding, 8px, 8px, 8px, 8px, 16px, 16px);
+        }
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        @include Responsive(padding-top, auto, auto, auto, auto, 100%, 100%);
+    }
+
+    &>div {
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        display: block;
-        padding-bottom: 0px;
+        display: flex;
+        @include Responsive(position, initial, initial, initial, initial, absolute, absolute);
+        @include Responsive(flex-direction, column, row, column, row, column, column);
     }
 
     ul {
+        height: 100%;
+        width: 100%;
         list-style: none;
-        margin: 0;
         padding: 0;
+        margin: 0;
         display: flex;
+        @include Responsive(flex-direction, column, row, column, row, row, row);
 
         li {
-            width: 100%;
-            height: 100%;
+            position: relative;
+            @include Responsive(width, 96px, 96px, 96px, 96px, 100%, 100%);
+            @include Responsive(height, 96px, 96px, 96px, 96px, 100%, 100%);
 
             &>div {
-
-                input[type="radio"] {
-                    display: none;
-
-                    &:checked+label {
-                        @include Neumorphism(true);
-                    }
-
-                    &:disabled+label {
-                        cursor: default;
-                    }
-                }
-
-                label {
-                    @include Neumorphism(false);
-                    @include Responsive(border-radius, 8px, 8px, 16px);
-                    width: 100%;
-                    height: 100%;
-                    color: inherit;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-                    gap: 8px;
-                    font-size: 16px;
-                    cursor: pointer;
-
-                    // h1 {
-                    //     font-size: 1.2em;
-                    // }
-
-                    p {
-                        padding: 8px;
-                        margin: 0;
-                    }
-
-                    span {
-                        @include Responsive(display, none, none, initial);
-                    }
-                }
-            }
-        }
-    }
-
-    ._detail {
-        font-size: 100%;
-
-        &>div {
-            @include Neumorphism(true);
-            @include Responsive(border-radius, 8px, 8px, 16px);
-            width: 100%;
-            height: 100%;
-            padding: 48px;
-            overflow: auto;
-
-            &::-webkit-scrollbar {
-                display: none;
-            }
-        }
-
-        h2 {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        ._sptitle {
-            text-align: center;
-            padding-bottom: 16px;
-            @include Responsive(display, initial, initial, none);
-
-            ._sptitle1 {
-                font-size: 1.2em;
-            }
-
-            ._sptitle2 {
-                font-size: 1.6em;
+                width: 100%;
+                height: 100%;
+                @include Responsive(padding, 8px, 8px, 8px, 8px, 16px, 16px);
             }
         }
     }
 }
 
-._square {
-    display: block;
-    position: relative;
+._detail {
+    @include Neumorphism(true);
+    border-radius: 16px;
+    padding: 16px;
     height: 100%;
-
-    &::before {
-        content: '';
-        display: block;
-        padding-top: 100%;
-    }
+    width: 100%;
 
     &>div {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
         height: 100%;
+        width: 100%;
+    }
 
-        @include Responsive(padding, 8px, 8px, 16px);
+    ._sptitle {
+        text-align: center;
+        padding: 16px 0px;
+        @include Responsive(display, initial, initial, initial, initial, none, none);
+
+        ._sptitle1 {
+            font-size: 1.6em;
+        }
+    }
+}
+
+input[type="radio"] {
+    display: none;
+
+    &:checked+label {
+        @include Neumorphism(true);
+    }
+
+    &:disabled+label {
+        cursor: default;
+    }
+}
+
+label {
+    @include Neumorphism(false);
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 16px;
+    cursor: pointer;
+
+    span {
+        @include Responsive(display, none, none, none, none, initial, initial);
+    }
+
+    p {
+        padding: 8px;
+        margin: 0;
     }
 }
 
@@ -241,16 +222,22 @@ h1 {
     gap: 8px;
 
     svg {
-        @include Responsive(width, 60%, 60%, 30%);
-        @include Responsive(height, 60%, 60%, 30%);
+        @include Responsive(width, 60%, 60%, 60%, 60%, 30%, 30%);
+        @include Responsive(height, 60%, 60%, 60%, 60%, 30%, 30%);
 
         fill: $fw-color;
     }
 }
 
 h2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     svg {
-        @include Responsive(width, 100%, 70%, 50%);
+        @include Responsive(width, 50%, 80%, 50%, 70%, 50%, 50%);
         fill: darken($color: $bg-color, $amount: 10%);
     }
 }

@@ -18,263 +18,521 @@
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  padding: 0px;
+  min-height: 100vh;
   height: 100vh;
-  min-height: initial;
-  max-width: 500px;
+  max-width: 100%;
   flex-direction: column-reverse;
 }
-@media screen and (min-width: 576px) {
-  #root .App {
-    padding: 0px;
-  }
-}
-@media screen and (min-width: 768px) {
-  #root .App {
-    padding: 0px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  #root .App {
-    padding: 8px;
-  }
-}
-@media screen and (min-width: 576px) {
+@media (min-width: 576px) and (orientation: landscape) {
   #root .App {
     height: 100vh;
   }
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 576px) and (orientation: portrait) {
   #root .App {
     height: 100vh;
   }
 }
-@media screen and (min-width: 1200px) {
+@media (min-width: 768px) and (orientation: landscape) {
+  #root .App {
+    height: 100vh;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+  #root .App {
+    height: 100vh;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
   #root .App {
     height: initial;
   }
 }
-@media screen and (min-width: 576px) {
+@media (min-width: 1200px) and (orientation: portrait) {
   #root .App {
-    min-height: initial;
+    height: initial;
   }
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 576px) and (orientation: landscape) {
   #root .App {
-    min-height: initial;
+    max-width: 100%;
   }
 }
-@media screen and (min-width: 1200px) {
+@media (min-width: 576px) and (orientation: portrait) {
   #root .App {
-    min-height: 100vh;
+    max-width: 100%;
   }
 }
-@media screen and (min-width: 576px) {
+@media (min-width: 768px) and (orientation: landscape) {
+  #root .App {
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
   #root .App {
     max-width: 500px;
   }
 }
-@media screen and (min-width: 768px) {
-  #root .App {
-    max-width: 500px;
-  }
-}
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) and (orientation: landscape) {
   #root .App {
     max-width: 1500px;
   }
 }
-@media screen and (min-width: 576px) {
+@media (min-width: 1200px) and (orientation: portrait) {
+  #root .App {
+    max-width: 1500px;
+  }
+}
+@media (min-width: 576px) and (orientation: landscape) {
+  #root .App {
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 576px) and (orientation: portrait) {
   #root .App {
     flex-direction: column-reverse;
   }
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) and (orientation: landscape) {
+  #root .App {
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
   #root .App {
     flex-direction: column-reverse;
   }
 }
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) and (orientation: landscape) {
+  #root .App {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) and (orientation: portrait) {
   #root .App {
     flex-direction: row;
   }
 }
 
 ._panels {
-  display: flex;
-  flex-direction: row;
-  padding: 8px;
-}
-@media screen and (min-width: 576px) {
-  ._panels {
-    flex-direction: row;
-  }
-}
-@media screen and (min-width: 768px) {
-  ._panels {
-    flex-direction: row;
-  }
-}
-@media screen and (min-width: 1200px) {
-  ._panels {
-    flex-direction: column;
-  }
-}
-@media screen and (min-width: 576px) {
-  ._panels {
-    padding: 8px;
-  }
-}
-@media screen and (min-width: 768px) {
-  ._panels {
-    padding: 8px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  ._panels {
-    padding: 0px;
-  }
+  position: relative;
+  width: 100%;
 }
 ._panels#_menu {
   overflow: auto;
-  padding-top: 0px;
+  height: 100%;
   width: 100%;
-  flex-direction: row;
+  height: auto;
 }
-@media screen and (min-width: 576px) {
+@media (min-width: 576px) and (orientation: landscape) {
+  ._panels#_menu {
+    width: auto;
+  }
+}
+@media (min-width: 576px) and (orientation: portrait) {
   ._panels#_menu {
     width: 100%;
   }
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) and (orientation: landscape) {
+  ._panels#_menu {
+    width: auto;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
   ._panels#_menu {
     width: 100%;
   }
 }
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) and (orientation: landscape) {
   ._panels#_menu {
     width: 50%;
   }
 }
-@media screen and (min-width: 576px) {
+@media (min-width: 1200px) and (orientation: portrait) {
   ._panels#_menu {
-    flex-direction: row;
+    width: 50%;
   }
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 576px) and (orientation: landscape) {
   ._panels#_menu {
-    flex-direction: row;
-  }
-}
-@media screen and (min-width: 1200px) {
-  ._panels#_menu {
-    flex-direction: column;
-  }
-}
-._panels#_menu ul {
-  flex-direction: row;
-}
-._panels#_menu ul li {
-  width: 96px;
-  height: 96px;
-}
-@media screen and (min-width: 576px) {
-  ._panels#_menu ul li {
-    width: 96px;
-  }
-}
-@media screen and (min-width: 768px) {
-  ._panels#_menu ul li {
-    width: 96px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  ._panels#_menu ul li {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 576px) {
-  ._panels#_menu ul li {
-    height: 96px;
-  }
-}
-@media screen and (min-width: 768px) {
-  ._panels#_menu ul li {
-    height: 96px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  ._panels#_menu ul li {
     height: 100%;
   }
 }
-._panels#_menu ul:nth-of-type(2) {
-  order: -1;
-}
-@media screen and (min-width: 576px) {
-  ._panels#_menu ul:nth-of-type(2) {
-    order: -1;
+@media (min-width: 576px) and (orientation: portrait) {
+  ._panels#_menu {
+    height: auto;
   }
 }
-@media screen and (min-width: 768px) {
-  ._panels#_menu ul:nth-of-type(2) {
-    order: -1;
+@media (min-width: 768px) and (orientation: landscape) {
+  ._panels#_menu {
+    height: 100%;
   }
 }
-@media screen and (min-width: 1200px) {
-  ._panels#_menu ul:nth-of-type(2) {
-    order: 0;
+@media (min-width: 768px) and (orientation: portrait) {
+  ._panels#_menu {
+    height: auto;
   }
 }
-._panels#_menu ul:nth-of-type(2) li:nth-of-type(1) {
-  order: 2;
-}
-@media screen and (min-width: 576px) {
-  ._panels#_menu ul:nth-of-type(2) li:nth-of-type(1) {
-    order: 2;
+@media (min-width: 1200px) and (orientation: landscape) {
+  ._panels#_menu {
+    height: 100%;
   }
 }
-@media screen and (min-width: 768px) {
-  ._panels#_menu ul:nth-of-type(2) li:nth-of-type(1) {
-    order: 2;
-  }
-}
-@media screen and (min-width: 1200px) {
-  ._panels#_menu ul:nth-of-type(2) li:nth-of-type(1) {
-    order: 0;
+@media (min-width: 1200px) and (orientation: portrait) {
+  ._panels#_menu {
+    height: 100%;
   }
 }
 ._panels#_body {
   flex: 1;
+  height: 100%;
+}
+._panels#_body > div {
   width: 100%;
   height: 100%;
+  padding: 8px;
+}
+@media (min-width: 576px) and (orientation: landscape) {
+  ._panels#_body > div {
+    padding: 8px;
+  }
+}
+@media (min-width: 576px) and (orientation: portrait) {
+  ._panels#_body > div {
+    padding: 8px;
+  }
+}
+@media (min-width: 768px) and (orientation: landscape) {
+  ._panels#_body > div {
+    padding: 8px;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+  ._panels#_body > div {
+    padding: 8px;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  ._panels#_body > div {
+    padding: 16px;
+  }
+}
+@media (min-width: 1200px) and (orientation: portrait) {
+  ._panels#_body > div {
+    padding: 16px;
+  }
+}
+._panels::before {
+  content: "";
   display: block;
-  padding-bottom: 0px;
+  padding-top: auto;
+}
+@media (min-width: 576px) and (orientation: landscape) {
+  ._panels::before {
+    padding-top: auto;
+  }
+}
+@media (min-width: 576px) and (orientation: portrait) {
+  ._panels::before {
+    padding-top: auto;
+  }
+}
+@media (min-width: 768px) and (orientation: landscape) {
+  ._panels::before {
+    padding-top: auto;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+  ._panels::before {
+    padding-top: auto;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  ._panels::before {
+    padding-top: 100%;
+  }
+}
+@media (min-width: 1200px) and (orientation: portrait) {
+  ._panels::before {
+    padding-top: 100%;
+  }
+}
+._panels > div {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: initial;
+  flex-direction: row;
+}
+@media (min-width: 576px) and (orientation: landscape) {
+  ._panels > div {
+    position: initial;
+  }
+}
+@media (min-width: 576px) and (orientation: portrait) {
+  ._panels > div {
+    position: initial;
+  }
+}
+@media (min-width: 768px) and (orientation: landscape) {
+  ._panels > div {
+    position: initial;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+  ._panels > div {
+    position: initial;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  ._panels > div {
+    position: absolute;
+  }
+}
+@media (min-width: 1200px) and (orientation: portrait) {
+  ._panels > div {
+    position: absolute;
+  }
+}
+@media (min-width: 576px) and (orientation: landscape) {
+  ._panels > div {
+    flex-direction: column;
+  }
+}
+@media (min-width: 576px) and (orientation: portrait) {
+  ._panels > div {
+    flex-direction: row;
+  }
+}
+@media (min-width: 768px) and (orientation: landscape) {
+  ._panels > div {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+  ._panels > div {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  ._panels > div {
+    flex-direction: column;
+  }
+}
+@media (min-width: 1200px) and (orientation: portrait) {
+  ._panels > div {
+    flex-direction: column;
+  }
 }
 ._panels ul {
+  height: 100%;
+  width: 100%;
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
   display: flex;
+  flex-direction: row;
+}
+@media (min-width: 576px) and (orientation: landscape) {
+  ._panels ul {
+    flex-direction: column;
+  }
+}
+@media (min-width: 576px) and (orientation: portrait) {
+  ._panels ul {
+    flex-direction: row;
+  }
+}
+@media (min-width: 768px) and (orientation: landscape) {
+  ._panels ul {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+  ._panels ul {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  ._panels ul {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) and (orientation: portrait) {
+  ._panels ul {
+    flex-direction: row;
+  }
 }
 ._panels ul li {
+  position: relative;
+  width: 96px;
+  height: 96px;
+}
+@media (min-width: 576px) and (orientation: landscape) {
+  ._panels ul li {
+    width: 96px;
+  }
+}
+@media (min-width: 576px) and (orientation: portrait) {
+  ._panels ul li {
+    width: 96px;
+  }
+}
+@media (min-width: 768px) and (orientation: landscape) {
+  ._panels ul li {
+    width: 96px;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+  ._panels ul li {
+    width: 96px;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  ._panels ul li {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) and (orientation: portrait) {
+  ._panels ul li {
+    width: 100%;
+  }
+}
+@media (min-width: 576px) and (orientation: landscape) {
+  ._panels ul li {
+    height: 96px;
+  }
+}
+@media (min-width: 576px) and (orientation: portrait) {
+  ._panels ul li {
+    height: 96px;
+  }
+}
+@media (min-width: 768px) and (orientation: landscape) {
+  ._panels ul li {
+    height: 96px;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+  ._panels ul li {
+    height: 96px;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  ._panels ul li {
+    height: 100%;
+  }
+}
+@media (min-width: 1200px) and (orientation: portrait) {
+  ._panels ul li {
+    height: 100%;
+  }
+}
+._panels ul li > div {
   width: 100%;
   height: 100%;
+  padding: 8px;
 }
-._panels ul li > div input[type=radio] {
+@media (min-width: 576px) and (orientation: landscape) {
+  ._panels ul li > div {
+    padding: 8px;
+  }
+}
+@media (min-width: 576px) and (orientation: portrait) {
+  ._panels ul li > div {
+    padding: 8px;
+  }
+}
+@media (min-width: 768px) and (orientation: landscape) {
+  ._panels ul li > div {
+    padding: 8px;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+  ._panels ul li > div {
+    padding: 8px;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  ._panels ul li > div {
+    padding: 16px;
+  }
+}
+@media (min-width: 1200px) and (orientation: portrait) {
+  ._panels ul li > div {
+    padding: 16px;
+  }
+}
+
+._detail {
+  box-shadow: 8px 8px 8px #c1c9d0 inset, -8px -8px 8px #e4e7ea inset, -2px -2px 2px #cfd5db, 2px 2px 2px #e4e7ea;
+  background-color: #dbdfe4;
+  border-radius: 16px;
+  padding: 16px;
+  height: 100%;
+  width: 100%;
+}
+._detail > div {
+  height: 100%;
+  width: 100%;
+}
+._detail ._sptitle {
+  text-align: center;
+  padding: 16px 0px;
+  display: initial;
+}
+@media (min-width: 576px) and (orientation: landscape) {
+  ._detail ._sptitle {
+    display: initial;
+  }
+}
+@media (min-width: 576px) and (orientation: portrait) {
+  ._detail ._sptitle {
+    display: initial;
+  }
+}
+@media (min-width: 768px) and (orientation: landscape) {
+  ._detail ._sptitle {
+    display: initial;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+  ._detail ._sptitle {
+    display: initial;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  ._detail ._sptitle {
+    display: none;
+  }
+}
+@media (min-width: 1200px) and (orientation: portrait) {
+  ._detail ._sptitle {
+    display: none;
+  }
+}
+._detail ._sptitle ._sptitle1 {
+  font-size: 1.6em;
+}
+
+input[type=radio] {
   display: none;
 }
-._panels ul li > div input[type=radio]:checked + label {
+input[type=radio]:checked + label {
   box-shadow: 8px 8px 8px #c1c9d0 inset, -8px -8px 8px #e4e7ea inset, -2px -2px 2px #cfd5db, 2px 2px 2px #e4e7ea;
   background-color: #dbdfe4;
 }
-._panels ul li > div input[type=radio]:disabled + label {
+input[type=radio]:disabled + label {
   cursor: default;
 }
-._panels ul li > div label {
+
+label {
   box-shadow: 8px 8px 8px #c1c9d0, -8px -8px 8px #e7eaed, 2px 2px 2px #edeff1 inset, -2px -2px 2px #c1c9d0 inset;
   background-color: #e1e5e8;
-  border-radius: 8px;
+  border-radius: 16px;
   width: 100%;
   height: 100%;
   color: inherit;
@@ -286,140 +544,42 @@
   font-size: 16px;
   cursor: pointer;
 }
-@media screen and (min-width: 576px) {
-  ._panels ul li > div label {
-    border-radius: 8px;
+label span {
+  display: none;
+}
+@media (min-width: 576px) and (orientation: landscape) {
+  label span {
+    display: none;
   }
 }
-@media screen and (min-width: 768px) {
-  ._panels ul li > div label {
-    border-radius: 8px;
+@media (min-width: 576px) and (orientation: portrait) {
+  label span {
+    display: none;
   }
 }
-@media screen and (min-width: 1200px) {
-  ._panels ul li > div label {
-    border-radius: 16px;
+@media (min-width: 768px) and (orientation: landscape) {
+  label span {
+    display: none;
   }
 }
-._panels ul li > div label p {
+@media (min-width: 768px) and (orientation: portrait) {
+  label span {
+    display: none;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  label span {
+    display: initial;
+  }
+}
+@media (min-width: 1200px) and (orientation: portrait) {
+  label span {
+    display: initial;
+  }
+}
+label p {
   padding: 8px;
   margin: 0;
-}
-._panels ul li > div label span {
-  display: none;
-}
-@media screen and (min-width: 576px) {
-  ._panels ul li > div label span {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) {
-  ._panels ul li > div label span {
-    display: none;
-  }
-}
-@media screen and (min-width: 1200px) {
-  ._panels ul li > div label span {
-    display: initial;
-  }
-}
-._panels ._detail {
-  font-size: 100%;
-}
-._panels ._detail > div {
-  box-shadow: 8px 8px 8px #c1c9d0 inset, -8px -8px 8px #e4e7ea inset, -2px -2px 2px #cfd5db, 2px 2px 2px #e4e7ea;
-  background-color: #dbdfe4;
-  border-radius: 8px;
-  width: 100%;
-  height: 100%;
-  padding: 48px;
-  overflow: auto;
-}
-@media screen and (min-width: 576px) {
-  ._panels ._detail > div {
-    border-radius: 8px;
-  }
-}
-@media screen and (min-width: 768px) {
-  ._panels ._detail > div {
-    border-radius: 8px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  ._panels ._detail > div {
-    border-radius: 16px;
-  }
-}
-._panels ._detail > div::-webkit-scrollbar {
-  display: none;
-}
-._panels ._detail h2 {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-._panels ._detail ._sptitle {
-  text-align: center;
-  padding-bottom: 16px;
-  display: initial;
-}
-@media screen and (min-width: 576px) {
-  ._panels ._detail ._sptitle {
-    display: initial;
-  }
-}
-@media screen and (min-width: 768px) {
-  ._panels ._detail ._sptitle {
-    display: initial;
-  }
-}
-@media screen and (min-width: 1200px) {
-  ._panels ._detail ._sptitle {
-    display: none;
-  }
-}
-._panels ._detail ._sptitle ._sptitle1 {
-  font-size: 1.2em;
-}
-._panels ._detail ._sptitle ._sptitle2 {
-  font-size: 1.6em;
-}
-
-._square {
-  display: block;
-  position: relative;
-  height: 100%;
-}
-._square::before {
-  content: "";
-  display: block;
-  padding-top: 100%;
-}
-._square > div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 8px;
-}
-@media screen and (min-width: 576px) {
-  ._square > div {
-    padding: 8px;
-  }
-}
-@media screen and (min-width: 768px) {
-  ._square > div {
-    padding: 8px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  ._square > div {
-    padding: 16px;
-  }
 }
 
 h1 {
@@ -435,52 +595,104 @@ h1 svg {
   height: 60%;
   fill: #3f4953;
 }
-@media screen and (min-width: 576px) {
+@media (min-width: 576px) and (orientation: landscape) {
   h1 svg {
     width: 60%;
   }
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 576px) and (orientation: portrait) {
   h1 svg {
     width: 60%;
   }
 }
-@media screen and (min-width: 1200px) {
+@media (min-width: 768px) and (orientation: landscape) {
+  h1 svg {
+    width: 60%;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+  h1 svg {
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
   h1 svg {
     width: 30%;
   }
 }
-@media screen and (min-width: 576px) {
+@media (min-width: 1200px) and (orientation: portrait) {
+  h1 svg {
+    width: 30%;
+  }
+}
+@media (min-width: 576px) and (orientation: landscape) {
   h1 svg {
     height: 60%;
   }
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 576px) and (orientation: portrait) {
   h1 svg {
     height: 60%;
   }
 }
-@media screen and (min-width: 1200px) {
+@media (min-width: 768px) and (orientation: landscape) {
+  h1 svg {
+    height: 60%;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+  h1 svg {
+    height: 60%;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  h1 svg {
+    height: 30%;
+  }
+}
+@media (min-width: 1200px) and (orientation: portrait) {
   h1 svg {
     height: 30%;
   }
 }
 
-h2 svg {
+h2 {
   width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2 svg {
+  width: 80%;
   fill: #c1c9d0;
 }
-@media screen and (min-width: 576px) {
+@media (min-width: 576px) and (orientation: landscape) {
   h2 svg {
-    width: 100%;
+    width: 50%;
   }
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 576px) and (orientation: portrait) {
+  h2 svg {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) and (orientation: landscape) {
+  h2 svg {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
   h2 svg {
     width: 70%;
   }
 }
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) and (orientation: landscape) {
+  h2 svg {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) and (orientation: portrait) {
   h2 svg {
     width: 50%;
   }
