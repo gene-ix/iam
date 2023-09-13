@@ -212,13 +212,33 @@ label {
     font-size: 16px;
     cursor: pointer;
 
-    span {
-        @include Responsive(display, none, none, none, none, initial, initial);
+    &>div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
     }
 
-    p {
-        padding: 8px;
-        margin: 0;
+    .pcpanel {
+        @include Responsive(display, none, none, none, none, flex, flex);
+    }
+
+    .sppanel {
+        @include Responsive(display, flex, flex, flex, flex, none, none);
+    }
+
+    span {
+        text-align: center;
+        width: 100%;
+    }
+
+    svg {
+        fill: currentColor;
+        width: 40%;
+        height: 100%;
     }
 }
 
@@ -236,6 +256,8 @@ h1 {
 
         fill: $fw-color;
     }
+
+    span {}
 }
 
 h2 {

@@ -611,42 +611,89 @@ label {
   font-size: 16px;
   cursor: pointer;
 }
-label span {
+label > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+label .pcpanel {
   display: none;
 }
 @media (min-width: 576px) and (orientation: landscape) {
-  label span {
+  label .pcpanel {
     display: none;
   }
 }
 @media (min-width: 576px) and (orientation: portrait) {
-  label span {
+  label .pcpanel {
     display: none;
   }
 }
 @media (min-width: 768px) and (orientation: landscape) {
-  label span {
+  label .pcpanel {
     display: none;
   }
 }
 @media (min-width: 768px) and (orientation: portrait) {
-  label span {
+  label .pcpanel {
     display: none;
   }
 }
 @media (min-width: 1200px) and (orientation: landscape) {
-  label span {
-    display: initial;
+  label .pcpanel {
+    display: flex;
   }
 }
 @media (min-width: 1200px) and (orientation: portrait) {
-  label span {
-    display: initial;
+  label .pcpanel {
+    display: flex;
   }
 }
-label p {
-  padding: 8px;
-  margin: 0;
+label .sppanel {
+  display: flex;
+}
+@media (min-width: 576px) and (orientation: landscape) {
+  label .sppanel {
+    display: flex;
+  }
+}
+@media (min-width: 576px) and (orientation: portrait) {
+  label .sppanel {
+    display: flex;
+  }
+}
+@media (min-width: 768px) and (orientation: landscape) {
+  label .sppanel {
+    display: flex;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+  label .sppanel {
+    display: flex;
+  }
+}
+@media (min-width: 1200px) and (orientation: landscape) {
+  label .sppanel {
+    display: none;
+  }
+}
+@media (min-width: 1200px) and (orientation: portrait) {
+  label .sppanel {
+    display: none;
+  }
+}
+label span {
+  text-align: center;
+  width: 100%;
+}
+label svg {
+  fill: currentColor;
+  width: 40%;
+  height: 100%;
 }
 
 h1 {
@@ -722,7 +769,6 @@ h1 svg {
     height: 30%;
   }
 }
-
 h2 {
   width: 100%;
   height: 100%;
