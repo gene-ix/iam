@@ -25,7 +25,7 @@ function Detail(props) {
                                     <p className="_sptitle1">{detail.title1}</p>
                                     <p className="_sptitle2">{detail.title2}</p>
                                 </div>
-                                <div>
+                                <div className="_detailtextlist">
                                     {
                                         [...detail.detail || []].map((value, index) => {
                                             return (

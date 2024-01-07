@@ -75,7 +75,7 @@ $fw-color: darken($color: $bg-color, $amount: 60%);
     * {
         box-sizing: border-box;
         outline: none;
-        margin: 0;
+        // margin: 0;
     }
 
     .App {
@@ -173,15 +173,28 @@ $fw-color: darken($color: $bg-color, $amount: 60%);
     &>div {
         height: 100%;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include Responsive(display, block, block, block, block, flex, flex);
     }
 
     ._sptitle {
         text-align: center;
         padding: 16px 0px;
+        margin-bottom: 16px;
         @include Responsive(display, initial, initial, initial, initial, none, none);
 
         ._sptitle1 {
             font-size: 1.6em;
+            margin-bottom: 0;
+        }
+    }
+
+    ._detailtextlist {
+        p {
+            margin-bottom: 8px;
         }
     }
 }
