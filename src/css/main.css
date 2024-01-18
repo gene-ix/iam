@@ -620,6 +620,9 @@
   font-size: 1.6em;
   margin-bottom: 0;
 }
+._detail ._detailtextlist {
+  width: 100%;
+}
 ._detail ._detailtextlist p {
   margin-bottom: 8px;
 }
