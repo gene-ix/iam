@@ -193,6 +193,8 @@ $fw-color: darken($color: $bg-color, $amount: 60%);
     }
 
     ._detailtextlist {
+        width: 100%;
+
         p {
             margin-bottom: 8px;
         }
